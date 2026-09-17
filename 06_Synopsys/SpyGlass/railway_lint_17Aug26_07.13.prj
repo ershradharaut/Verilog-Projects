@@ -1,0 +1,60 @@
+#  -------------------------------------------------------------------
+#  This is a software generated project file. Manual edits to this file could be lost during the next save operation
+#  Copyright Atrenta, Inc 2010
+#  -------------------------------------------------------------------
+#!SPYGLASS_PROJECT_FILE
+#!VERSION 3.0
+#  -------------------------------------------------------------------
+#  This is a software generated project file. Manual edits to this file could be lost during the next save operation
+#  Copyright Synopsys Inc.
+#  Last Updated By: SpyGlass SpyGlass_vU-2023.03-SP2
+#  Last Updated On Mon Aug 17 06:52:55 2026
+#
+#  -------------------------------------------------------------------
+
+##Data Import Section
+
+read_file -type verilog ../../04_RTL_Design/src/deadlock_prevention.v
+#BackRefFile:railway_lint.prj #LineNumber:13
+read_file -type verilog ../../04_RTL_Design/src/decision_engine.v
+#BackRefFile:railway_lint.prj #LineNumber:15
+read_file -type verilog ../../04_RTL_Design/src/fifo_request_buffer.v
+#BackRefFile:railway_lint.prj #LineNumber:17
+read_file -type verilog ../../04_RTL_Design/src/intelligent_scheduler.v
+#BackRefFile:railway_lint.prj #LineNumber:19
+read_file -type verilog ../../04_RTL_Design/src/monitoring_diagnostic.v
+#BackRefFile:railway_lint.prj #LineNumber:21
+read_file -type verilog ../../04_RTL_Design/src/point_switch_controller.v
+#BackRefFile:railway_lint.prj #LineNumber:23
+read_file -type verilog ../../04_RTL_Design/src/railway_top.v
+#BackRefFile:railway_lint.prj #LineNumber:25
+read_file -type verilog ../../04_RTL_Design/src/route_conflict_detector.v
+#BackRefFile:railway_lint.prj #LineNumber:27
+read_file -type verilog ../../04_RTL_Design/src/route_lock_manager.v
+#BackRefFile:railway_lint.prj #LineNumber:29
+read_file -type verilog ../../04_RTL_Design/src/safety_integrity_checker.v
+#BackRefFile:railway_lint.prj #LineNumber:31
+read_file -type verilog ../../04_RTL_Design/src/signal_manager.v
+#BackRefFile:railway_lint.prj #LineNumber:33
+read_file -type verilog ../../04_RTL_Design/src/train_movement_controller.v
+#BackRefFile:railway_lint.prj #LineNumber:35
+read_file -type verilog ../../04_RTL_Design/src/train_request_manager.v
+#BackRefFile:railway_lint.prj #LineNumber:37
+
+##Common Options Section
+
+set_option projectwdir .
+set_option language_mode mixed
+set_option designread_enable_synthesis yes
+set_option designread_disable_flatten no
+set_option enableSV yes
+set_option top railway_top
+set_option incdir { ../../04_RTL_Design/Include_Files }
+set_option active_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+set_option report_incr_messages yes
+
+
+##Goal Setup Section
+
+current_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+

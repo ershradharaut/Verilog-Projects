@@ -1,0 +1,14 @@
+<Command name="schRTLInfo"  delimiter="."  >
+<RTLBlock >
+<RTLInfo   name="current_state_0"  type="2"  fileName="../04_RTL_Design/src/train_request_manager.v"  >
+    <Seg beginLine="40"  endLine="87"  />
+  </RTLInfo>
+<Instance name="railway_top_tb.DUT.U1"  />
+</RTLBlock>
+<RTLBlock >
+<RTLInfo   name="current_state_1"  type="2"  fileName="../04_RTL_Design/src/decision_engine.v"  >
+    <Seg beginLine="56"  endLine="86"  />
+  </RTLInfo>
+<Instance name="railway_top_tb.DUT.U4"  />
+</RTLBlock>
+</Command>

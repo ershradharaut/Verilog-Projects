@@ -1,0 +1,128 @@
+
+Warning-[LNX_OS_VERUN] Unsupported Linux version
+  Linux version 'Rocky Linux release 8.10 (Green Obsidian)' is not supported 
+  on 'x86_64' officially, assuming linux compatibility by default. Set 
+  VCS_ARCH_OVERRIDE to linux or suse32 to override.
+  Please refer to release notes for information on supported platforms.
+
+Command: vcs -full64 -sverilog -debug_access+all +vpi +cover=bcst +incdir+../04_RTL_Design/Include_Files \
+../04_RTL_Design/src/deadlock_prevention.v ../04_RTL_Design/src/decision_engine.v \
+../04_RTL_Design/src/fifo_request_buffer.v ../04_RTL_Design/src/intelligent_scheduler.v \
+../04_RTL_Design/src/monitoring_diagnostic.v ../04_RTL_Design/src/point_switch_controller.v \
+../04_RTL_Design/src/railway_top.v ../04_RTL_Design/src/route_conflict_detector.v \
+../04_RTL_Design/src/route_lock_manager.v ../04_RTL_Design/src/safety_integrity_checker.v \
+../04_RTL_Design/src/signal_manager.v ../04_RTL_Design/src/train_movement_controller.v \
+../04_RTL_Design/src/train_request_manager.v tb/railway_top_tb.v -P /home/sveri/Synopsys/ufe_optional_spyglass-vcs/U-2023.03-SP2/SPYGLASS_HOME/lib/multi-vcst/verdi/share/PLI/VCS/linux64/novas.tab \
+/home/sveri/Synopsys/ufe_optional_spyglass-vcs/U-2023.03-SP2/SPYGLASS_HOME/lib/multi-vcst/verdi/share/PLI/VCS/linux64/pli.a \
+-l compile_coverage.log
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Mon Aug 17 03:45:49 2026
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+Warning-[UNK_COMP_ARG] Unknown compile time plus argument used
+  Unknown compile time plus argument 'cover=bcst' is ignored.
+
+ + use `+plusarg_save' to bind in runtime plusargs;
+ + use `+plusarg_ignore' to suppress this message.
+Parsing design file '../04_RTL_Design/src/deadlock_prevention.v'
+Parsing included file '../04_RTL_Design/Include_Files/railway_defines.vh'.
+Back to file '../04_RTL_Design/src/deadlock_prevention.v'.
+Parsing included file '../04_RTL_Design/Include_Files/railway_pkg.vh'.
+Back to file '../04_RTL_Design/src/deadlock_prevention.v'.
+Parsing design file '../04_RTL_Design/src/decision_engine.v'
+Parsing included file '../04_RTL_Design/Include_Files/railway_defines.vh'.
+Back to file '../04_RTL_Design/src/decision_engine.v'.
+Parsing included file '../04_RTL_Design/Include_Files/railway_pkg.vh'.
+Back to file '../04_RTL_Design/src/decision_engine.v'.
+Parsing design file '../04_RTL_Design/src/fifo_request_buffer.v'
+Parsing included file '../04_RTL_Design/Include_Files/railway_defines.vh'.
+Back to file '../04_RTL_Design/src/fifo_request_buffer.v'.
+Parsing included file '../04_RTL_Design/Include_Files/railway_pkg.vh'.
+Back to file '../04_RTL_Design/src/fifo_request_buffer.v'.
+Parsing design file '../04_RTL_Design/src/intelligent_scheduler.v'
+Parsing included file '../04_RTL_Design/Include_Files/railway_defines.vh'.
+Back to file '../04_RTL_Design/src/intelligent_scheduler.v'.
+Parsing included file '../04_RTL_Design/Include_Files/railway_pkg.vh'.
+Back to file '../04_RTL_Design/src/intelligent_scheduler.v'.
+Parsing design file '../04_RTL_Design/src/monitoring_diagnostic.v'
+Parsing included file '../04_RTL_Design/Include_Files/railway_defines.vh'.
+Back to file '../04_RTL_Design/src/monitoring_diagnostic.v'.
+Parsing included file '../04_RTL_Design/Include_Files/railway_pkg.vh'.
+Back to file '../04_RTL_Design/src/monitoring_diagnostic.v'.
+Parsing design file '../04_RTL_Design/src/point_switch_controller.v'
+Parsing included file '../04_RTL_Design/Include_Files/railway_defines.vh'.
+Back to file '../04_RTL_Design/src/point_switch_controller.v'.
+Parsing included file '../04_RTL_Design/Include_Files/railway_pkg.vh'.
+Back to file '../04_RTL_Design/src/point_switch_controller.v'.
+Parsing design file '../04_RTL_Design/src/railway_top.v'
+Parsing included file '../04_RTL_Design/Include_Files/railway_defines.vh'.
+Back to file '../04_RTL_Design/src/railway_top.v'.
+Parsing included file '../04_RTL_Design/Include_Files/railway_pkg.vh'.
+Back to file '../04_RTL_Design/src/railway_top.v'.
+Parsing design file '../04_RTL_Design/src/route_conflict_detector.v'
+Parsing included file '../04_RTL_Design/Include_Files/railway_defines.vh'.
+Back to file '../04_RTL_Design/src/route_conflict_detector.v'.
+Parsing included file '../04_RTL_Design/Include_Files/railway_pkg.vh'.
+Back to file '../04_RTL_Design/src/route_conflict_detector.v'.
+Parsing design file '../04_RTL_Design/src/route_lock_manager.v'
+Parsing included file '../04_RTL_Design/Include_Files/railway_defines.vh'.
+Back to file '../04_RTL_Design/src/route_lock_manager.v'.
+Parsing included file '../04_RTL_Design/Include_Files/railway_pkg.vh'.
+Back to file '../04_RTL_Design/src/route_lock_manager.v'.
+Parsing design file '../04_RTL_Design/src/safety_integrity_checker.v'
+Parsing included file '../04_RTL_Design/Include_Files/railway_defines.vh'.
+Back to file '../04_RTL_Design/src/safety_integrity_checker.v'.
+Parsing included file '../04_RTL_Design/Include_Files/railway_pkg.vh'.
+Back to file '../04_RTL_Design/src/safety_integrity_checker.v'.
+Parsing design file '../04_RTL_Design/src/signal_manager.v'
+Parsing included file '../04_RTL_Design/Include_Files/railway_defines.vh'.
+Back to file '../04_RTL_Design/src/signal_manager.v'.
+Parsing included file '../04_RTL_Design/Include_Files/railway_pkg.vh'.
+Back to file '../04_RTL_Design/src/signal_manager.v'.
+Parsing design file '../04_RTL_Design/src/train_movement_controller.v'
+Parsing included file '../04_RTL_Design/Include_Files/railway_defines.vh'.
+Back to file '../04_RTL_Design/src/train_movement_controller.v'.
+Parsing included file '../04_RTL_Design/Include_Files/railway_pkg.vh'.
+Back to file '../04_RTL_Design/src/train_movement_controller.v'.
+Parsing design file '../04_RTL_Design/src/train_request_manager.v'
+Parsing included file '../04_RTL_Design/Include_Files/railway_defines.vh'.
+Back to file '../04_RTL_Design/src/train_request_manager.v'.
+Parsing included file '../04_RTL_Design/Include_Files/railway_pkg.vh'.
+Back to file '../04_RTL_Design/src/train_request_manager.v'.
+Parsing design file 'tb/railway_top_tb.v'
+Top Level Modules:
+       railway_top_tb
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+
+1 module and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/home/sveri/Synopsys/vcs/U-2023.03/linux64/lib -L/home/sveri/Synopsys/vcs/U-2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _573969_archive_1.so \
+_prev_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o \
+rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs /home/sveri/Synopsys/ufe_optional_spyglass-vcs/U-2023.03-SP2/SPYGLASS_HOME/lib/multi-vcst/verdi/share/PLI/VCS/linux64/pli.a \
+-lvcsnew -lsimprofile -luclinative /home/sveri/Synopsys/vcs/U-2023.03/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/home/sveri/Synopsys/vcs/U-2023.03/linux64/lib/vcs_save_restore_new.o /home/sveri/Synopsys/ufe_optional_spyglass-vcs/U-2023.03-SP2/SPYGLASS_HOME/lib/multi-vcst/verdi/share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+CPU time: .223 seconds to compile + .232 seconds to elab + .231 seconds to link

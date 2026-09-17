@@ -1,0 +1,50 @@
+# VCS generated files
+simv
+simv.daidir/
+csrc/
+ucli.key
+*.vpd
+*.vcd
+
+# Coverage generated files
+simv.vdb/
+coverage_report/
+urgReport/
+*.cm
+*.cm.log
+*.cm_dir/
+
+# Verdi generated files
+*.fsdb
+*.fsdb.*
+novas_dump.log
+verdiLog/
+.vsim/
+
+# Temporary editor files
+*~
+
+# Generated verification data
+05_Verification/coverage/
+05_Verification/coverage.vdb/
+05_Verification/Simulation_Scripts/coverage_report_current/
+05_Verification/Simulation_Scripts/vdCovLog/
+05_Verification/Simulation_Scripts/fsdbreportLog/
+
+# Generated simulation executables
+simv_cov
+simv_cov.daidir/
+simv_cov.vdb/
+
+# Generated SpyGlass data
+06_Synopsys/SpyGlass/railway_lint/
+
+# Generated Design Compiler data
+06_Synopsys/Design_Compiler/scripts/alib-*/
+
+# Generated SpyGlass databases
+06_Synopsys/SpyGlass/spyglass-*/
+06_Synopsys/railway_lint/
+
+# Generated Design Compiler libraries
+06_Synopsys/alib-*/

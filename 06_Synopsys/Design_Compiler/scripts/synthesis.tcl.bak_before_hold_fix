@@ -1,0 +1,150 @@
+# ============================================================
+# Smart Railway Interlocking System
+# Design Compiler Synthesis Script
+# ============================================================
+
+set TOP railway_top
+
+# ------------------------------------------------------------
+# Project paths
+# Script is executed from:
+# /home/sveri/samvlsi/railway_track/06_Synopsys
+# ------------------------------------------------------------
+
+set RTL_PATH "../04_RTL_Design"
+set INC_PATH "../04_RTL_Design/Include_Files"
+
+set DC_PATH "Design_Compiler"
+set REPORT_PATH "$DC_PATH/reports"
+set OUTPUT_PATH "$DC_PATH/output"
+
+set LIB_PATH "/home/sveri/Downloads/SAED05nm_EDK_06_2026/SAED05_EDK/SAED05nm_EDK_STD_RVT/liberty/nldm/base"
+
+set TARGET_LIB "$LIB_PATH/saed05rvt_base_tt0p75v25c.db"
+
+# ------------------------------------------------------------
+# Library setup
+# ------------------------------------------------------------
+
+set_app_var search_path [list . $RTL_PATH $INC_PATH $LIB_PATH]
+
+set_app_var target_library $TARGET_LIB
+set_app_var link_library "* $TARGET_LIB"
+
+# ------------------------------------------------------------
+# Read RTL
+# ------------------------------------------------------------
+
+analyze -format sverilog [list \
+    "$RTL_PATH/src/train_request_manager.v" \
+    "$RTL_PATH/src/fifo_request_buffer.v" \
+    "$RTL_PATH/src/intelligent_scheduler.v" \
+    "$RTL_PATH/src/decision_engine.v" \
+    "$RTL_PATH/src/safety_integrity_checker.v" \
+    "$RTL_PATH/src/signal_manager.v" \
+    "$RTL_PATH/src/point_switch_controller.v" \
+    "$RTL_PATH/src/route_lock_manager.v" \
+    "$RTL_PATH/src/train_movement_controller.v" \
+    "$RTL_PATH/src/monitoring_diagnostic.v" \
+    "$RTL_PATH/src/railway_top.v" \
+    "$RTL_PATH/src/route_conflict_detector.v" \
+    "$RTL_PATH/src/deadlock_prevention.v" \
+]
+
+# ------------------------------------------------------------
+# Elaborate
+# ------------------------------------------------------------
+
+elaborate $TOP
+
+current_design $TOP
+
+# ------------------------------------------------------------
+# Link
+# ------------------------------------------------------------
+
+link
+
+# ------------------------------------------------------------
+# Clock
+# ------------------------------------------------------------
+
+create_clock -name clk -period 10 [get_ports clk]
+
+set_clock_uncertainty 0.2 [get_clocks clk]
+
+# ------------------------------------------------------------
+# Input / Output delays
+# ------------------------------------------------------------
+
+set_input_delay 1.0 -clock clk \
+    [remove_from_collection [all_inputs] [get_ports clk]]
+
+set_output_delay 1.0 -clock clk [all_outputs]
+
+# ------------------------------------------------------------
+# Input transition
+# ------------------------------------------------------------
+
+set_input_transition 0.1 \
+    [remove_from_collection [all_inputs] [get_ports clk]]
+
+# ------------------------------------------------------------
+# Fanout constraint
+# ------------------------------------------------------------
+
+set_max_fanout 16 [current_design]
+
+# ------------------------------------------------------------
+# Synthesis
+# ------------------------------------------------------------
+
+compile_ultra
+
+# ------------------------------------------------------------
+# Reports
+# ------------------------------------------------------------
+
+report_area > "$REPORT_PATH/railway_area.rpt"
+
+report_timing \
+    -max_paths 20 \
+    -delay_type max \
+    > "$REPORT_PATH/railway_timing_max.rpt"
+
+report_timing \
+    -max_paths 20 \
+    -delay_type min \
+    > "$REPORT_PATH/railway_timing_min.rpt"
+
+report_qor > "$REPORT_PATH/railway_qor.rpt"
+
+report_power > "$REPORT_PATH/railway_power.rpt"
+
+check_design > "$REPORT_PATH/railway_check_design.rpt"
+
+report_constraint \
+    -all_violators \
+    > "$REPORT_PATH/railway_constraints.rpt"
+
+# ------------------------------------------------------------
+# Synthesized netlist
+# ------------------------------------------------------------
+
+write -format verilog \
+    -hierarchy \
+    -output "$OUTPUT_PATH/railway_top_synth.v"
+
+write_sdc "$OUTPUT_PATH/railway_top.sdc"
+
+# ------------------------------------------------------------
+# Final message
+# ------------------------------------------------------------
+
+echo "============================================================"
+echo "DESIGN COMPILER SYNTHESIS COMPLETED"
+echo "TOP MODULE : railway_top"
+echo "LIBRARY    : SAED05 RVT TT 0.75V 25C"
+echo "============================================================"
+
+exit

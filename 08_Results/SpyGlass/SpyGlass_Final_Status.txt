@@ -1,0 +1,8 @@
+SPYGLASS LINT FINAL STATUS
+==========================
+Top Module: railway_top
+Goal: lint/lint_rtl
+New Violations: 0
+Waived Violations: 0
+W528: No violations
+Status: SPYGLASS LINT COMPLETE

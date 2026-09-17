@@ -1,0 +1,40 @@
+
+Warning-[LNX_OS_VERUN] Unsupported Linux version
+  Linux version 'Rocky Linux release 8.10 (Green Obsidian)' is not supported 
+  on 'x86_64' officially, assuming linux compatibility by default. Set 
+  VCS_ARCH_OVERRIDE to linux or suse32 to override.
+  Please refer to release notes for information on supported platforms.
+
+
+Warning-[UNKWN_OPTVSIM] Unknown option passed
+  Ignoring unknown option '-debuge_access+all' passed to 'vcs' and continuing 
+  compilation.
+
+Command: vcs -full64 -sverilog -debuge_access+all -P kbd -f verdi_filelist.f -l compile.log \
+
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Thu Sep  3 08:39:12 2026
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+Error-[COP_PLI_TAB] Cannot open pli table file
+  Cannot open pli table file 'kbd'.
+  Please make sure tab file exists and readable.
+
+Bad command line arg encountered
+CPU time: .109 seconds to compile
