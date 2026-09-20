@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 
-`include "railway_defines.vh"
-`include "railway_pkg.vh"
+`include "railway_defines.v"
+`include "railway_pkg.v"
 
 
 module fifo_request_buffer

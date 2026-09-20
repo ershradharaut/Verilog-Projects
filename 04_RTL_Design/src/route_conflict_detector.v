@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
-`include "railway_defines.vh"
-`include "railway_pkg.vh"
+`include "railway_defines.v"
+`include "railway_pkg.v"
 module route_conflict_detector(input clk,input reset,input route_request,input [4:0] requested_route,input [4:0] active_route,input route_locked,input track_busy,output reg conflict_detected,output reg [4:0] conflict_route,output reg route_safe);
 always @(posedge clk) begin
 if(reset) begin conflict_detected<=1'b0; conflict_route<=5'd0; route_safe<=1'b0; end

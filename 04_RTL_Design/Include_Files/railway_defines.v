@@ -31,11 +31,11 @@
 // FSM States
 //--------------------------------------------------
 
-`define IDLE              3'd0
-`define RECEIVE_REQUEST   3'd1
-`define VALIDATE_REQUEST  3'd2
-`define GENERATE_PACKET   3'd3
-`define SEND_TO_FIFO      3'd4
-`define ERROR_STATE       3'd5
+`define IDLE               3'd0
+`define RECEIVE_REQUEST    3'd1
+`define VALIDATE_REQUEST   3'd2
+`define GENERATE_PACKET    3'd3
+`define SEND_TO_FIFO       3'd4
+`define ERROR_STATE        3'd5
 
 `endif
